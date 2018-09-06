@@ -1,1 +1,1 @@
-Test 2
+git commit -m "Add 'Deliver…​' and 'Deploy…​' stages"
