@@ -1,16 +1,22 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14"
-  },
+  "name": "socketio",
+  "version": "1.0.0",
+  "description": "Real time chat application",
+  "main": "app.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "node ./bin/www"
+  },
+  "author": "vivek.hebalkar@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "ejs": "~2.5.5",
+    "express": "^4.15.2",
+    "morgan": "~1.7.0",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "serve-favicon": "~2.3.2",
+    "socket.io": "^1.7.3"
   }
 }
