@@ -1,1 +1,1 @@
-git commit -m "Add 'Deliver…​' and 'Deploy…​' stages"
+ git commit -m "Add 'Deliver…​' and 'Deploy…​' stages"
