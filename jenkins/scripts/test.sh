@@ -17,5 +17,6 @@ echo 'The following "npm" command tests that your simple Node.js/React'
 echo 'application renders satisfactorily. This command actually invokes the test'
 echo 'runner Jest (https://facebook.github.io/jest/).'
 set -x
-npm install -g mocha
+/bin/bash", "-c", "if [[ ! -d node_modules ]]; then npm install; npm install -g mocha; npm install socket.io-client -g; fi; exec \"${@:0}\";
+npm start &
 mocha test/test.js
