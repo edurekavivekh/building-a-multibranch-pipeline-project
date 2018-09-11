@@ -20,4 +20,5 @@ set -x
 npm install
 npm install -g mocha
 npm start &
+sleep 15s
 mocha test/test.js
