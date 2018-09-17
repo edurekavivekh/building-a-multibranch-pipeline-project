@@ -19,6 +19,6 @@ echo 'runner Jest (https://facebook.github.io/jest/).'
 set -x
 npm install --save-dev 
 npm install -g mocha --save-dev
-nohup npm start &
-sleep 15s
-mocha test/test.js
+#nohup npm start &
+#sleep 15s
+#mocha test/test.js
