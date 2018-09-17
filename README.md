@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ## building-a-multibranch-pipeline-project
+=======
+ ## building-a-multibranch-pipeline-project
+>>>>>>> 491b64a5d61bffd62e130d854529bd867a5ecf3b
 
 This repository is for the
 [Build a multibranch Pipeline project](https://jenkins.io/doc/tutorials/build-a-multibranch-pipeline-project/)

@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 git commit -m "Add 'Deliver…​' and 'Deploy…​' stages"
+=======
+ git commit -m "Add 'Deliver…​' and 'Deploy…​' stages"
+>>>>>>> 491b64a5d61bffd62e130d854529bd867a5ecf3b
