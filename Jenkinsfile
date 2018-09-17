@@ -1,9 +1,9 @@
 pipeline {
     agent {
         docker {
-            image 'node'
+            image 'chatapp:29'
             args '-p 3000:3000 -p 5000:5000'
-	    args '-v $HOME/:/usr/local/src'
+	    args '-v /home/centos/building-a-multibranch-pipeline-project:/usr/local/src'
         }
     }
     environment {
