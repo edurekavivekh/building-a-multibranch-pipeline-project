@@ -1,13 +1,18 @@
 pipeline {
-	agent { dockerfile true }
-    
+    agent {
+        docker {
+            image 'node'
+            args '-p 3000:3000 -p 5000:5000'
+	    args '-v $HOME/:/usr/local/src'
+        }
+    }
     environment {
         CI = 'true'
     }
     stages {
         stage('Build') {
             steps {
-		docker.build("chat-app:${env.BUILD_ID}")
+                sh 'npm install'
             }
         }
         stage('Test') {
@@ -20,10 +25,9 @@ pipeline {
                 branch 'development'
             }
             steps {
-
-               	sh './jenkins/scripts/deliver-for-development.sh'
+                sh './jenkins/scripts/deliver-for-development.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
-               	sh './jenkins/scripts/kill.sh'
+                sh './jenkins/scripts/kill.sh'
             }
         }
         stage('Deploy for production') {
