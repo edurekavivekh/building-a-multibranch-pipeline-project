@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-#docker -H 10.0.109.150 stop chatapp
+docker -H 10.0.109.150 stop chatapp
 #BUILD="$(($BUILD_ID-2))"
 #docker -H 10.0.109.150 rmi --force chatapp:$BUILD
          if [ "$?" == "0" ]
