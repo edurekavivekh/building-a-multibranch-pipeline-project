@@ -7,9 +7,7 @@ pipeline {
     stages {
         stage('Build') {
 		steps {
-			script: 'BUILD="$(($BUILD_ID-2))"'
-			sh 'docker -H 127.0.0.1 rmi --force chatapp:env.$BUILD'
-			sh 'docker -H 127.0.0.1 run -d -p 80:3000 --name chatapp chatapp:env.$BUILD_ID'
+			sh './jenkins/scripts/build.sh'
 		      }
 	}
         stage('Test') {
