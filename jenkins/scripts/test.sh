@@ -18,7 +18,7 @@ echo 'application renders satisfactorily. This command actually invokes the test
 echo 'runner Jest (https://facebook.github.io/jest/).'
 set -x
 hostname
-/usr/bin/links "http://localhost"
+ps -elf
 #npm install 
 #nohup npm start &
 #sleep 15s
