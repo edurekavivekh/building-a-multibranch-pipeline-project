@@ -1,9 +1,16 @@
 pipeline {
-    agent { dockerfile true }
+    agent none
     environment {
         CI = 'true'
     }
+    
     stages {
+        stage('Build') {
+		steps {
+			sh 'docker -H 127.0.0.1 rmi --force chatapp:$BUILD'
+			sh 'docker -H 127.0.0.1 run -d -p 80:3000 --name chatapp chatapp:$BUILD_ID'
+		      }
+	}
         stage('Test') {
             steps {
                 sh './jenkins/scripts/test.sh'
