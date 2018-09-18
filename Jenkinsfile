@@ -1,4 +1,5 @@
 pipeline {
+	agent { Dockerfile true }
     environment {
         CI = 'true'
     }
